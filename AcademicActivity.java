@@ -14,5 +14,17 @@ public class AcademicActivity{
     private int currentEnrollment;
     private LocalDateTime startDateTime;
     private LocalDateTime endDateTime;
-    
+
+    public AcademicActivity(Tutor tutor, String title, String description, int maxCapacity, LocalDateTime startDateTime, LocalDateTime endDateTime) {
+        this.id = UUID.randomUUID().toString();
+        this.tutor = tutor;
+        this.title = title;
+        this.description = description;
+        this.maxCapacity = maxCapacity;
+        this.startDateTime = startDateTime;
+        this.endDateTime = endDateTime;
+        this.students = new ArrayList<>();
+        this.currentEnrollment = 0;
+    }
+
 }
