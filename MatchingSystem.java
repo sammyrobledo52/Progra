@@ -41,7 +41,8 @@ public class MatchingSystem {
     Set<String> tutorSpecializations = new HashSet<>(tutor.getSpecializations());
     Set<String> intersection = new HashSet<>(studentInterests);
     intersection.retainAll(tutorSpecializations);
-    
+    Set<String> union = new HashSet<>(studentInterests);
+    union.addAll(tutorSpecializations);
   
   
 
