@@ -43,6 +43,8 @@ public class MatchingSystem {
     intersection.retainAll(tutorSpecializations);
     Set<String> union = new HashSet<>(studentInterests);
     union.addAll(tutorSpecializations);
+
+    double commonInterestsScore = (double) intersection.size() / union.size();
   
   
 
