@@ -16,5 +16,12 @@ public class Student extends User {
     }
 
     public void showInterest(Tutor tutor) {
-        // Implementation for showing interest in a tutor
+        // Implemento un espacio para busqueda de tutor
+    }
+
+public void joinActivity(AcademicActivity activity) {
+        if (!enrolledActivities.contains(activity)) {
+            enrolledActivities.add(activity);
+            activity.addStudent(this);
+        }
     }
