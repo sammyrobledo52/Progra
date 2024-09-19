@@ -14,3 +14,13 @@ public class Tutor extends User {
         this.rating = 0.0f;
         this.createdActivities = new ArrayList<>();
     }
+
+    public void createActivity(String description, int maxCapacity) {
+        AcademicActivity activity = new AcademicActivity(this, description, maxCapacity);
+        createdActivities.add(activity);
+    }
+
+    public void acceptStudent(Student student) {
+        // Implementation for accepting a student
+    }
+
