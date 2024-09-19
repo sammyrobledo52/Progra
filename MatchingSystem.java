@@ -33,6 +33,9 @@ public class MatchingSystem {
     Set<String> tutorSpecializations = new HashSet<>(tutor.getSpecializations());
     return !Collections.disjoint(studentInterests, tutorSpecializations);
   }
+  private boolean isAvailable(Tutor tutor) {
+    return !tutor.getAvailability().getAvailableTimes().isEmpty();
+  }
   
   
 
