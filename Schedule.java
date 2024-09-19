@@ -11,6 +11,11 @@ public class Schedule {
     // Lista que almacena las franjas horarias disponibles.
     private List<TimeSlot> availableTimes;
 
-
+    /**
+     * Constructor que inicializa la lista de franjas horarias disponibles.
+     */
+    public Schedule() {
+        this.availableTimes = new ArrayList<>();
+    }
 
 }
