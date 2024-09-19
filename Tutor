@@ -37,3 +37,17 @@ public class Tutor extends User {
     public Schedule getAvailability() {
         return availability;
     }
+   public float getRating() {
+        return rating;
+    }
+
+    public List<AcademicActivity> getCreatedActivities() {
+        return new ArrayList<>(createdActivities);
+    }
+
+    // Setters
+    public void addSpecialization(String specialization) {
+        if (!specializations.contains(specialization)) {
+            specializations.add(specialization);
+        }
+    }
