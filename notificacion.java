@@ -36,6 +36,11 @@ public class NotificationSystem {
   // Listado notificaciones usar los atributos
 
 
+ public void markNotificationAsRead(User user, String notificationId) {
+        List<Notification> notifications = userNotifications.get(user);
+// Sistema de marcaje de notificaciones 
+
+
  public List<Notification> getNotificationsForUser(User user) {
         return userNotifications.getOrDefault(user, new ArrayList<>());
     }
