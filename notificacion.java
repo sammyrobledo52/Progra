@@ -36,6 +36,13 @@ public class NotificationSystem {
   // Listado notificaciones usar los atributos
 
 
+ public List<Notification> getNotificationsForUser(User user) {
+        return userNotifications.getOrDefault(user, new ArrayList<>());
+    }
+//Listado de las notificaciones con sus constructores
+
+
+
  public NotificationSystem() {
         this.userNotifications = new HashMap<>();
     }
