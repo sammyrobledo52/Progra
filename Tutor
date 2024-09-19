@@ -51,3 +51,12 @@ public class Tutor extends User {
             specializations.add(specialization);
         }
     }
+
+    public void setAvailability(Schedule availability) {
+        this.availability = availability;
+    }
+
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+}
