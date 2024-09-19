@@ -82,5 +82,30 @@ public class RatingSystem {
             this.timestamp = LocalDateTime.now();
         }
 
+        // Getters
+        /**
+         * Obtiene el estudiante que realizó la calificación.
+         * @return El estudiante que calificó.
+         */
+        public Student getStudent() { return student; }
+
+            /**
+         * Obtiene la puntuación de la calificación.
+         * @return La puntuación otorgada.
+         */
+        public int getScore() { return score; }
+
+        /**
+         * Obtiene el comentario asociado a la calificación.
+         * @return El comentario de la calificación.
+         */
+        public String getComment() { return comment; }
+
+        /**
+         * Obtiene la marca de tiempo de cuándo se realizó la calificación.
+         * @return La fecha y hora en que se realizó la calificación.
+         */
+        public LocalDateTime getTimestamp() { return timestamp; }
+
     }
 }
