@@ -24,4 +24,7 @@ public class ActivityManager{
                 "New activity available: " + activity.getTitle() + " by " + activity.getTutor().getName());
         }
     }
+        private List<Student> findInterestedStudents(AcademicActivity activity) {
+        return new ArrayList<>();
+    }
 }
