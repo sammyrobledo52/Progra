@@ -36,6 +36,10 @@ public class MatchingSystem {
   private boolean isAvailable(Tutor tutor) {
     return !tutor.getAvailability().getAvailableTimes().isEmpty();
   }
+  private double calculateMatchScore(Student student, Tutor tutor) {
+    Set<String> studentInterests = new HashSet<>(student.getInterests());
+    Set<String> tutorSpecializations = new HashSet<>(tutor.getSpecializations());
+    
   
   
 
