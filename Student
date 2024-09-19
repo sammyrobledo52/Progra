@@ -10,3 +10,11 @@ public class Student extends User {
         this.interests = new ArrayList<>();
         this.enrolledActivities = new ArrayList<>();
     }
+
+    public void searchTutors() {
+        // Implemento la busqueda
+    }
+
+    public void showInterest(Tutor tutor) {
+        // Implementation for showing interest in a tutor
+    }
