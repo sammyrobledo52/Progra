@@ -31,5 +31,20 @@ public class RatingSystem {
         tutorRatings.computeIfAbsent(tutor, k -> new ArrayList<>()).add(rating);
         updateTutorRating(tutor);
     }
-    
+
+    /**
+     * Actualiza la calificación promedio del tutor en función de las calificaciones recibidas.
+     *
+     * @param tutor El tutor cuyo promedio de calificaciones será actualizado.
+     */
+    private void updateTutorRating(Tutor tutor) {
+        List<Rating> ratings = tutorRatings.get(tutor);
+        if (ratings != null && !ratings.isEmpty()) {
+            double averageRating = ratings.stream()
+                .mapToInt(Rating::getScore)
+                .average()
+                .orElse(0.0);
+            tutor.setRating((float) averageRating);
+        }
+    }
 }
