@@ -24,3 +24,16 @@ public class Tutor extends User {
         // Implementation for accepting a student
     }
 
+ @Override
+    public void updateProfile() {
+        // Implementation for updating tutor profile
+    }
+
+    // Getters
+    public List<String> getSpecializations() {
+        return new ArrayList<>(specializations);
+    }
+
+    public Schedule getAvailability() {
+        return availability;
+    }
