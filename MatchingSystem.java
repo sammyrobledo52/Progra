@@ -45,6 +45,8 @@ public class MatchingSystem {
     union.addAll(tutorSpecializations);
 
     double commonInterestsScore = (double) intersection.size() / union.size();
+
+    double ratingScore = tutor.getRating() / 5.0; 
   
   
 
