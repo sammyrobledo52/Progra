@@ -39,6 +39,8 @@ public class MatchingSystem {
   private double calculateMatchScore(Student student, Tutor tutor) {
     Set<String> studentInterests = new HashSet<>(student.getInterests());
     Set<String> tutorSpecializations = new HashSet<>(tutor.getSpecializations());
+    Set<String> intersection = new HashSet<>(studentInterests);
+    intersection.retainAll(tutorSpecializations);
     
   
   
