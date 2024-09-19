@@ -47,4 +47,14 @@ public class RatingSystem {
             tutor.setRating((float) averageRating);
         }
     }
+
+    /**
+     * Devuelve la lista de calificaciones para un tutor específico.
+     *
+     * @param tutor El tutor cuyas calificaciones se desean obtener.
+     * @return Una lista de calificaciones del tutor, o una lista vacía si el tutor no tiene calificaciones.
+     */
+    public List<Rating> getRatingsForTutor(Tutor tutor) {
+        return tutorRatings.getOrDefault(tutor, new ArrayList<>());
+    }
 }
