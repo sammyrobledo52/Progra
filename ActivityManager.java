@@ -49,4 +49,7 @@ public class ActivityManager{
         }
         return relevantActivities;
     }
+        private boolean isActivityRelevantForStudent(AcademicActivity activity, Student student) {
+        return true;
+    }
 }
