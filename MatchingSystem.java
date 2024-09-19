@@ -47,6 +47,10 @@ public class MatchingSystem {
     double commonInterestsScore = (double) intersection.size() / union.size();
 
     double ratingScore = tutor.getRating() / 5.0; 
+
+    return 0.7 * commonInterestsScore + 0.3 * ratingScore;
+  }
+  
   
   
 
