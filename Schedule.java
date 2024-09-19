@@ -37,4 +37,13 @@ public class Schedule {
         availableTimes.remove(slot);
     }
 
+    /**
+     * Devuelve la lista de franjas horarias disponibles.
+     *
+     * @return Una lista de franjas horarias disponibles.
+     */
+    public List<TimeSlot> getAvailableTimes() {
+        return new ArrayList<>(availableTimes);
+    }
+
 }
