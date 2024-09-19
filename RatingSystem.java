@@ -68,5 +68,19 @@ public class RatingSystem {
         private String comment;
         private LocalDateTime timestamp;
 
+        /**
+         * Constructor para crear una nueva calificación.
+         *
+         * @param student  El estudiante que realiza la calificación.
+         * @param score    La puntuación otorgada (entre 1 y 5).
+         * @param comment  El comentario asociado a la calificación.
+         */
+        public Rating(Student student, int score, String comment) {
+            this.student = student;
+            this.score = score;
+            this.comment = comment;
+            this.timestamp = LocalDateTime.now();
+        }
+
     }
 }
