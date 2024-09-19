@@ -27,4 +27,10 @@ public class AcademicActivity{
         this.currentEnrollment = 0;
     }
 
+     public void addStudent(Student student) {
+        if (currentEnrollment < maxCapacity && !students.contains(student)) {
+            students.add(student);
+            currentEnrollment++;
+        }
+    }
 }
