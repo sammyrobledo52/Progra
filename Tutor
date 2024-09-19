@@ -1,0 +1,8 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class Tutor extends User {
+    private List<String> specializations;
+    private Schedule availability;
+    private float rating;
+    private List<AcademicActivity> createdActivities;
