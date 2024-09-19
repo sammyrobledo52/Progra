@@ -28,4 +28,13 @@ public class Schedule {
         availableTimes.add(slot);
     }
 
+    /**
+     * Elimina una franja horaria del horario disponible.
+     *
+     * @param slot La franja horaria que se desea eliminar.
+     */
+    public void removeTimeSlot(TimeSlot slot) {
+        availableTimes.remove(slot);
+    }
+
 }
