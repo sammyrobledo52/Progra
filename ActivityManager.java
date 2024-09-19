@@ -27,4 +27,16 @@ public class ActivityManager{
         private List<Student> findInterestedStudents(AcademicActivity activity) {
         return new ArrayList<>();
     }
+        public void enrollStudentInActivity(Student student, String activityId) {
+        for (AcademicActivity activity : activities) {
+            if (activity.getId().equals(activityId)) {
+                activity.addStudent(student);
+                notificationSystem.sendNotification(student, 
+                    "You've been enrolled in " + activity.getTitle());
+                notificationSystem.sendNotification(activity.getTutor(), 
+                    student.getName() + " has enrolled in your activity: " + activity.getTitle());
+                break;
+            }
+        }
+    }
 }
