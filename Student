@@ -25,3 +25,13 @@ public void joinActivity(AcademicActivity activity) {
             activity.addStudent(this);
         }
     }
+
+    @Override
+    public void updateProfile() {
+        // para implementar los profiles 
+    }
+
+    // Getters
+    public List<String> getInterests() {
+        return new ArrayList<>(interests);
+    }
