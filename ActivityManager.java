@@ -39,4 +39,14 @@ public class ActivityManager{
             }
         }
     }
+        public List<AcademicActivity> getActivitiesForStudent(Student student) {
+        List<AcademicActivity> relevantActivities = new ArrayList<>();
+        for (AcademicActivity activity : activities) {
+            if (activity.getEnrolledStudents().contains(student) || 
+                isActivityRelevantForStudent(activity, student)) {
+                relevantActivities.add(activity);
+            }
+        }
+        return relevantActivities;
+    }
 }
