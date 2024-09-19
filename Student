@@ -35,3 +35,15 @@ public void joinActivity(AcademicActivity activity) {
     public List<String> getInterests() {
         return new ArrayList<>(interests);
     }
+
+    public List<AcademicActivity> getEnrolledActivities() {
+        return new ArrayList<>(enrolledActivities);
+    }
+
+    // Setter
+    public void addInterest(String interest) {
+        if (!interests.contains(interest)) {
+            interests.add(interest);
+        }
+    }
+}
