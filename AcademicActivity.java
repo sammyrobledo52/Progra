@@ -33,4 +33,9 @@ public class AcademicActivity{
             currentEnrollment++;
         }
     }
+        public void removeStudent(Student student) {
+        if (students.remove(student)) {
+            currentEnrollment--;
+        }
+    }
 }
