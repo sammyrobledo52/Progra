@@ -38,4 +38,9 @@ public class AcademicActivity{
             currentEnrollment--;
         }
     }
+    // Getters
+    public String getId() { return id; }
+    public Tutor getTutor() { return tutor; }
+    public List<Student> getEnrolledStudents() { return new ArrayList<>(students); }
+    public String getTitle() { return title; }
 }
