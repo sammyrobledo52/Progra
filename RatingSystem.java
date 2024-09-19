@@ -57,4 +57,16 @@ public class RatingSystem {
     public List<Rating> getRatingsForTutor(Tutor tutor) {
         return tutorRatings.getOrDefault(tutor, new ArrayList<>());
     }
+
+    /**
+     * Clase interna que representa una calificación, compuesta por el estudiante que la realizó, 
+     * la puntuación otorgada, un comentario y una marca de tiempo.
+     */
+    public static class Rating {
+        private Student student;
+        private int score;
+        private String comment;
+        private LocalDateTime timestamp;
+
+    }
 }
