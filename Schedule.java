@@ -18,4 +18,14 @@ public class Schedule {
         this.availableTimes = new ArrayList<>();
     }
 
+
+    /**
+     * Añade una nueva franja horaria disponible al horario.
+     *
+     * @param slot La franja horaria que se desea agregar.
+     */
+    public void addTimeSlot(TimeSlot slot) {
+        availableTimes.add(slot);
+    }
+
 }
