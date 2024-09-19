@@ -22,6 +22,12 @@ public class MatchingSystem {
             .sorted(Comparator.comparingDouble(tutor -> calculateMatchScore(student, tutor)))
             .collect(Collectors.toList());
   }
+    public List<Student> findMatchesForStudent(Tutor tutor) {
+    return students.stream()
+            .filter(student -> hasCommonInterests(student, tutor))
+            .sorted(Comparator.comparingDouble(student -> calculateMatchScore(student, tutor)))
+            .collect(Collectors.toList());
+  }
   
 
   
