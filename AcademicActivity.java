@@ -43,4 +43,10 @@ public class AcademicActivity{
     public Tutor getTutor() { return tutor; }
     public List<Student> getEnrolledStudents() { return new ArrayList<>(students); }
     public String getTitle() { return title; }
+    public String getDescription() { return description; }
+    public int getMaxCapacity() { return maxCapacity; }
+    public int getCurrentEnrollment() { return currentEnrollment; }
+    public LocalDateTime getStartDateTime() { return startDateTime; }
+    public LocalDateTime getEndDateTime() { return endDateTime; }
 }
+
