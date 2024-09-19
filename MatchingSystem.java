@@ -28,6 +28,12 @@ public class MatchingSystem {
             .sorted(Comparator.comparingDouble(student -> calculateMatchScore(student, tutor)))
             .collect(Collectors.toList());
   }
+  private boolean hasCommonInterests(Student student, Tutor tutor) {
+    Set<String> studentInterests = new HashSet<>(student.getInterests());
+    Set<String> tutorSpecializations = new HashSet<>(tutor.getSpecializations());
+    return !Collections.disjoint(studentInterests, tutorSpecializations);
+  }
+  
   
 
   
