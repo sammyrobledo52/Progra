@@ -17,4 +17,11 @@ public class ActivityManager{
         activities.add(activity);
         notifyInterestedStudents(activity);
     }
+
+     private void notifyInterestedStudents(AcademicActivity activity) {
+        for (Student student : findInterestedStudents(activity)) {
+            notificationSystem.sendNotification(student, 
+                "New activity available: " + activity.getTitle() + " by " + activity.getTutor().getName());
+        }
+    }
 }
