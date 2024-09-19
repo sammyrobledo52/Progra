@@ -6,3 +6,11 @@ public class Tutor extends User {
     private Schedule availability;
     private float rating;
     private List<AcademicActivity> createdActivities;
+
+    public Tutor(String email, String password) {
+        super(email, password);
+        this.specializations = new ArrayList<>();
+        this.availability = new Schedule();
+        this.rating = 0.0f;
+        this.createdActivities = new ArrayList<>();
+    }
