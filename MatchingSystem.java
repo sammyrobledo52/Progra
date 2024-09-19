@@ -9,5 +9,12 @@ public class MatchingSystem {
     this.students = new ArrayList<>();
     this.tutors = new ArrayList<>();
   }
+  public void addStudent(Student student) {
+    students.add(student);
+  }
+  public void addTutor(Tutor tutor) {
+    tutors.add(tutor);
+  }
+  
 
   
