@@ -51,7 +51,10 @@ public class MatchingSystem {
     return 0.7 * commonInterestsScore + 0.3 * ratingScore;
   }
   
-  
-  
+  public void notifyMatch(User user1, User user2) {
+    System.out.println("Conexión encontrada entre " + user1.getName() + " y " + user2.getname());
+  }
+}
+
 
   
