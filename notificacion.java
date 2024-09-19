@@ -29,3 +29,9 @@ import java.util.UUID;
     public String getMessage() { return message; }
     public LocalDateTime getTimestamp() { return timestamp; }
     public boolean isRead() { return isRead; }
+
+     import java.util.*;
+public class NotificationSystem {
+    private Map<User, List<Notification>> userNotifications;
+  // Listado notificaciones usar los atributos
+
