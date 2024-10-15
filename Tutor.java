@@ -29,4 +29,15 @@ public class Tutor extends User {
     public Schedule getAvailability() {
         return availability;
     }
+
+    public void setAvailability(Schedule availability) {
+        this.availability = availability;
+    }
+    
+    public void setRating(float rating) {
+        this.rating = rating;
+    }
+     public float getRating() {
+        return this.rating;
+    }
 }
