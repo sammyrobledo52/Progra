@@ -10,4 +10,20 @@ public NotificationSystem() {
         Notification notification = new Notification(recipient, message);
         userNotifications.computeIfAbsent(recipient, k -> new ArrayList<>()).add(notification);
     }
+
+    public List<Notification> getNotificationsForUser(User user) {
+        return userNotifications.getOrDefault(user, new ArrayList<>());
+    }
+
+    public void markNotificationAsRead(User user, String notificationId) {
+        List<Notification> notifications = userNotifications.get(user);
+        if (notifications != null) {
+            for (Notification notification : notifications) {
+                if (notification.getId().equals(notificationId)) {
+                    notification.markAsRead();
+                    break;
+                }
+            }
+        }
+    }
 }
