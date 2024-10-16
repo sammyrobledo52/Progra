@@ -26,19 +26,10 @@ public class Student extends User {
         this.intersts = interests;
     }
 
-    // Getters
-    public List<String> getInterests() {
-        return new ArrayList<>(interests);
-    }
-
-    public List<AcademicActivity> getEnrolledActivities() {
-        return new ArrayList<>(enrolledActivities);
-    }
-
-    // Setter
-    public void addInterest(String interest) {
-        if (!interests.contains(interest)) {
-            interests.add(interest);
-        }
+    @Override
+    public void displayInfo() {
+        super.displayInfo();
+        System.out.println("Major: " + major);
+        System.out.println("Interests: " + interests);
     }
 }
