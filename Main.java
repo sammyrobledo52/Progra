@@ -85,7 +85,9 @@ public class Main {
                     System.out.println("Tutor no encontrado.");
                 }
                 break;
-
+            default:
+                System.out.println("Opción no válida.");
+                break;
         }
 
     }
