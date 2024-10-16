@@ -141,6 +141,21 @@ public class Main {
             String email = scanner.nextLine();
             System.out.print("Ingrese su contraseña: ");
             String password = scanner.nextLine();
+
+            System.out.print("¿Es estudiante o tutor? (1. Estudiante, 2. Tutor): ");
+            int userType = scanner.nextInt();
+            scanner.nextLine(); 
+            
+            if (userType == 1) {
+                System.out.print("Ingrese su carrera: ");
+                String major = scanner.nextLine();
+                System.out.print("Ingrese sus intereses (separados por comas): ");
+                String[] interestsArray = scanner.nextLine().split(",");
+                List<String> interests = Arrays.asList(interestsArray);
+                users.add(new Student(id, name, email, password, major, interests));
+                System.out.println("Estudiante registrado exitosamente.");
+}
+
         }
     }
 
