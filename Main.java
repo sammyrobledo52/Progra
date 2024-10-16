@@ -193,6 +193,7 @@ public class Main {
                 List<String> interests = Arrays.asList(interestsArray);
                 users.add(new Student(id, name, email, password, major, interests));
                 System.out.println("Estudiante registrado exitosamente.");
+              // Si la opcion 1 es seleccionada agregamos nuevo estudiante con sus respectivos datos 
             else if (userType == 2) {
                 System.out.print("Ingrese su área de especialización: ");
                 String subjectExpertise = scanner.nextLine();
