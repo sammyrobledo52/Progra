@@ -44,7 +44,10 @@ public class Main {
                       .append(tutor.getSubjectExpertise()).append(",")
                       .append(String.join(";", tutor.getSpecializations())).append("\n");
             }
-       }
+          System.out.println("Usuario guardado exitosamente.");
+       }catch (IOException e) {
+            System.out.println("Error al guardar el usuario en el archivo CSV: " + e.getMessage());
+        }
     }
 
   /**
