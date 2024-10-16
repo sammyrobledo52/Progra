@@ -27,6 +27,10 @@ public class Tutor extends User {
         return specializations;
     }
 
+     public void setSpecializations(List<String> specializations) {
+        this.specializations = specializations;
+    }
+
     @Override
     public void displayInfo() {
         super.displayInfo();
