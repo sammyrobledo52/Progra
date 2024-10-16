@@ -25,7 +25,19 @@ public class Main {
     */
     public static void main(String[] args) {
 
-     }
+    private static void saveUserToCSV(User user) {
+       try (FileWriter writer = new FileWriter(CSV_FILE, true)) {
+      if (user instanceof Student) {
+                Student student = (Student) user;
+                writer.append(student.getId()).append(",")
+                      .append(student.getName()).append(",")
+                      .append(student.getEmail()).append(",")
+                      .append("Estudiante").append(",")
+                      .append(student.getMajor()).append(",")
+                      .append(String.join(";", student.getInterests())).append("\n");
+            }
+       }
+    }
 
   /**
    * Encuentra coincidencias entre estudiantes y tutores en el sistema de emparejamiento.
@@ -185,10 +197,10 @@ public class Main {
 }
 
 }
-
-        }
     }
+}       
+    
 
 
 
-}
+
