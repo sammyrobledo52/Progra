@@ -20,7 +20,34 @@ public class Main {
 
      }
 
-  
+  /**
+   * Encuentra coincidencias entre estudiantes y tutores en el sistema de emparejamiento.
+   * Dependiendo de la opción seleccionada por el usuario, se buscarán coincidencias
+   * para un estudiante o un tutor, basadas en su ID.
+   * 
+   * El método interactúa con el sistema de emparejamiento {@link MatchingSystem} para
+   * agregar estudiantes y tutores, y luego busca coincidencias según la opción seleccionada.
+   * 
+   * Funcionalidad:
+   * 1. Buscar coincidencias para un estudiante basado en su ID.
+   * 2. Buscar coincidencias para un tutor basado en su ID.
+   * 
+   * Proceso:
+   * - Los usuarios se dividen en estudiantes y tutores.
+   * - El sistema solicita al usuario seleccionar una opción y proporciona el ID del estudiante o tutor.
+   * - El sistema encuentra las coincidencias y las muestra en la consola.
+   * 
+   * Excepciones:
+   * - Si no se encuentra un estudiante o tutor con el ID proporcionado, se muestra un mensaje de error.
+   * 
+   * Variables:
+   * - `users`: Lista de usuarios (tutores y estudiantes).
+   * - `scanner`: Objeto para leer la entrada del usuario desde la consola.
+   * 
+   * Opción seleccionada:
+   * - 1: Buscar coincidencias para un estudiante.
+   * - 2: Buscar coincidencias para un tutor.
+   */
     private static void findMatches() {
         MatchingSystem matchingSystem = new MatchingSystem();
     
