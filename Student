@@ -4,10 +4,10 @@ public class Student extends User {
     private String major;
     private List<String> interests;
 
-    public Student(String email, String password) {
-        super(email, password);
-        this.interests = new ArrayList<>();
-        this.enrolledActivities = new ArrayList<>();
+    public Student(String id, String name, String email, String password, String major, List<String> interests) {
+        super(id, name, email, password);
+        this.major = major;
+        this.interests = interests;
     }
 
     public void searchTutors() {
