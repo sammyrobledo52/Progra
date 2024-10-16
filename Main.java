@@ -35,6 +35,14 @@ public class Main {
                       .append("Estudiante").append(",")
                       .append(student.getMajor()).append(",")
                       .append(String.join(";", student.getInterests())).append("\n");
+            }else if (user instanceof Tutor) {
+                Tutor tutor = (Tutor) user;
+                writer.append(tutor.getId()).append(",")
+                      .append(tutor.getName()).append(",")
+                      .append(tutor.getEmail()).append(",")
+                      .append("Tutor").append(",")
+                      .append(tutor.getSubjectExpertise()).append(",")
+                      .append(String.join(";", tutor.getSpecializations())).append("\n");
             }
        }
     }
