@@ -170,6 +170,7 @@ public class Main {
         System.out.print("¿Cuántos usuarios desea ingresar? ");
         int numberOfUsers = scanner.nextInt();
         scanner.nextLine(); 
+      //Usamos funcion scanner para leer la cantidad de usuarios y pasar a siguiente linea 
     
         for (int i = 0; i < numberOfUsers; i++) {
             System.out.print("Ingrese su ID: ");
