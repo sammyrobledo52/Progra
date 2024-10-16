@@ -125,7 +125,23 @@ public class Main {
         }
 
     }
-  
+
+    /**
+     * Permite ingresar nuevos usuarios al sistema, tanto estudiantes como tutores.
+     * 
+     * Se solicita al usuario que ingrese la cantidad de usuarios a registrar, luego para cada usuario
+     * se capturan los datos básicos (ID, nombre, email, contraseña) y dependiendo de si es estudiante
+     * o tutor, se capturan datos adicionales específicos.
+     * 
+     * Estudiantes:
+     * - Se solicita la carrera y los intereses (separados por comas).
+     * 
+     * Tutores:
+     * - Se solicita el área de especialización y las especializaciones adicionales (separadas por comas).
+     * 
+     * Manejo de errores:
+     * - Si el usuario ingresa una opción no válida para el tipo de usuario, se muestra un mensaje de error.
+     */
     private static void enterUsers() {
         System.out.println("\n--- Ingresar Usuarios (Estudiantes/Tutores) ---");
         System.out.print("¿Cuántos usuarios desea ingresar? ");
@@ -155,13 +171,17 @@ public class Main {
                 users.add(new Student(id, name, email, password, major, interests));
                 System.out.println("Estudiante registrado exitosamente.");
             else if (userType == 2) {
-            System.out.print("Ingrese su área de especialización: ");
-            String subjectExpertise = scanner.nextLine();
-            System.out.print("Ingrese sus especializaciones (separadas por comas): ");
-            String[] specializationsArray = scanner.nextLine().split(",");
-            List<String> specializations = Arrays.asList(specializationsArray);
-            users.add(new Tutor(id, name, email, password, subjectExpertise, specializations));
-            System.out.println("Tutor registrado exitosamente.");
+                System.out.print("Ingrese su área de especialización: ");
+                String subjectExpertise = scanner.nextLine();
+                System.out.print("Ingrese sus especializaciones (separadas por comas): ");
+                String[] specializationsArray = scanner.nextLine().split(",");
+                List<String> specializations = Arrays.asList(specializationsArray);
+                users.add(new Tutor(id, name, email, password, subjectExpertise, specializations));
+                System.out.println("Tutor registrado exitosamente.");
+            else {
+                System.out.println("Opción no válida.");
+}
+
 }
 
 }
