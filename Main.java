@@ -180,6 +180,7 @@ public class Main {
             String email = scanner.nextLine();
             System.out.print("Ingrese su contraseña: ");
             String password = scanner.nextLine();
+          //para el entero = 0 solicitamos todos los datos y los guardamos para la pregunta final 
 
             System.out.print("¿Es estudiante o tutor? (1. Estudiante, 2. Tutor): ");
             int userType = scanner.nextInt();
