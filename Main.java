@@ -20,5 +20,25 @@ public class Main {
 
      }
 
+  
+private static void findMatches() {
+    MatchingSystem matchingSystem = new MatchingSystem();
+
+    // Agregar estudiantes y tutores al sistema de emparejamiento
+    for (User user : users) {
+        if (user instanceof Student) {
+            matchingSystem.addStudent((Student) user);
+        } else if (user instanceof Tutor) {
+            matchingSystem.addTutor((Tutor) user);
+        }
+    }
+
+    // Menú para encontrar coincidencias
+    System.out.println("\n--- Encontrar coincidencias ---");
+    System.out.println("1. Encontrar coincidencias para un estudiante");
+    System.out.println("2. Encontrar coincidencias para un tutor");
+    System.out.print("Seleccione una opción: ");
+}
+
 
 }
