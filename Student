@@ -1,8 +1,8 @@
 import java.util.List;
 
 public class Student extends User {
+    private String major;
     private List<String> interests;
-    private List<AcademicActivity> enrolledActivities;
 
     public Student(String email, String password) {
         super(email, password);
