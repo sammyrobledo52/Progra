@@ -64,6 +64,28 @@ public class Main {
                     System.out.println("Estudiante no encontrado.");
                 }
                 break;
+            case 2:
+                // Buscar coincidencias para un tutor
+                System.out.print("Ingrese el ID del tutor: ");
+                String tutorId = scanner.nextLine();
+                Tutor tutor = null;
+                for (User user : users) {
+                    if (user instanceof Tutor && user.getId().equals(tutorId)) {
+                        tutor = (Tutor) user;
+                        break;
+                    }
+                }
+                if (tutor != null) {
+                    List<Student> matches = matchingSystem.findMatchesForTutor(tutor);
+                    System.out.println("Coincidencias encontradas para el tutor " + tutor.getName() + ":");
+                    for (Student match : matches) {
+                        System.out.println(match.getName());
+                    }
+                } else {
+                    System.out.println("Tutor no encontrado.");
+                }
+                break;
+
         }
 
     }
