@@ -34,6 +34,27 @@ public class User {
   public void setEmail(String email) {
     this.email = email;
   }
+
+  public String getPassword() {
+    return password;
+  }
+
+  public void setPassword(String password) {
+    this.password = password;
+  }
+
+  public void displayInfo() {
+    System.out.println("ID : " + id);
+    System.out.println("Name: " + name);
+    System.out.println("Email: " + email);
+  }
+
+  public void changePassword(String newPassword) {
+    this.password = newPassword;
+    System.out.println("Contraseña actualizada.");
+  }
+}
+
   
 
   
