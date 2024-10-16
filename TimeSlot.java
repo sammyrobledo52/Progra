@@ -35,4 +35,9 @@ public class TimeSlot{
     public void setEndTime(LocalTime endTime) {
         this.endTime = endTime;
     }
+
+    @Override
+    public String toString() {
+        return "Día: " + day + ", De: " + startTime + " a " + endTime;
+    }
 }
