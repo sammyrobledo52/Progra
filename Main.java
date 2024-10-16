@@ -125,6 +125,25 @@ public class Main {
         }
 
     }
+  
+    private static void enterUsers() {
+        System.out.println("\n--- Ingresar Usuarios (Estudiantes/Tutores) ---");
+        System.out.print("¿Cuántos usuarios desea ingresar? ");
+        int numberOfUsers = scanner.nextInt();
+        scanner.nextLine(); 
+    
+        for (int i = 0; i < numberOfUsers; i++) {
+            System.out.print("Ingrese su ID: ");
+            String id = scanner.nextLine();
+            System.out.print("Ingrese su nombre: ");
+            String name = scanner.nextLine();
+            System.out.print("Ingrese su email: ");
+            String email = scanner.nextLine();
+            System.out.print("Ingrese su contraseña: ");
+            String password = scanner.nextLine();
+        }
+    }
+
 
 
 }
